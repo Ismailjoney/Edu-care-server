@@ -7,5 +7,20 @@
       "id": "02",
       "name": "css"
     },
-   
+    {
+      "id": "03",
+      "name": "Bootstrap"
+    },
+    {
+      "id": "04",
+      "name": "Javascript"
+    },
+    {
+      "id": "05",
+      "name": "React"
+    },
+    {
+      "id": "06",
+      "name": "Node js"
+    }
   ]
