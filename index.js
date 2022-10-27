@@ -6,12 +6,25 @@ const port = process.env.PORT || 5000;
 app.use(cors())
 //get data
 const courseCategories = require('./data/courseitem.json');
-const course = require(`./data/course.json`)
+const course = require(`./data/course.json`);
+// const details =require(`./data/courseDetails.json`)
  
+
+
+
 //testing purpuse
 app.get('/',(req, res) => {
     res.send('learning website')
 })
+
+// app.get('./daetails-co',(req, res) => {
+//     id = req.params.id;
+//     const  sCourseDe= details.find(c => c.id === id)
+//     console.log (sCourseDe)
+//     res.send(sCourseDe)
+// })
+
+
 
 //get categories nav
 app.get('/coursecategories', (req,res) =>{
