@@ -7,8 +7,7 @@ app.use(cors())
 //get data
 const courseCategories = require('./data/courseitem.json');
 const course = require(`./data/course.json`);
- 
- 
+ const details  = require('./data/courseDetails.json'); 
 
 
 
@@ -17,7 +16,12 @@ app.get('/',(req, res) => {
     res.send('learning website')
 })
 
- 
+ app.get('/info/:id',(req, res)=>{
+    id = req.params.id;
+    const information = details.find(c => c.id === id);
+    console.log(information)
+    res.send(information)
+ })
 
 
 //get categories nav
@@ -25,7 +29,7 @@ app.get('/coursecategories', (req,res) =>{
     res.send(courseCategories)
 })
 
-//courses 6 tar name er api aita dekhe hasis na tor jorno likhci
+//courses  
 app.get('/course',(req,res) =>{
     res.send(course)
 })
